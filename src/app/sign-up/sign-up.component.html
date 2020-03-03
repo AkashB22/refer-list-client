@@ -1,0 +1,15 @@
+<h2>Sign Up</h2>
+<div class="container">
+    <div class="row">
+        <div class="error-message alert alert-danger" *ngIf="errorMsg">
+            {{errorMsg}}
+        </div>
+        <form [formGroup]="signUp" (ngSubmit)="onSubmit($event)">
+            <div class="form-group">
+                <label for="email">Enter your email</label>
+                <input type="text" name="email" id="email" formControlName="email">
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="!signUp.valid">Submit</button>
+        </form>
+    </div>
+</div>
