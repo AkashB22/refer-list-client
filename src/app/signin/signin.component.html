@@ -1,13 +1,13 @@
-<h2>Sign In</h2>
-<div class="container">
-    <div class="row">
+<div class="container text-center mt-5">
+    <h2>Sign In</h2>
+    <div class="row justify-content-center">
         <div class="error-message alert alert-danger" *ngIf="errorMsg">
             {{errorMsg}}
         </div>
         <form [formGroup]="signIn" (ngSubmit)="onSubmit($event)">
-            <div class="form-group">
+            <div class="form-group row justiify-content-center">
                 <label for="signInEmail">Enter your email</label>
-                <input type="text" name="signInEmail" id="signInEmail" formControlName="signInEmail">
+                <input type="text" name="signInEmail" id="signInEmail" formControlName="signInEmail" class="form-control">
             </div>
             <button type="submit" class="btn btn-primary" [disabled]="!signIn.valid">Submit</button>
         </form>

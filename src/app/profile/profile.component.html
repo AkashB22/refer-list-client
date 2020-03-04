@@ -1,8 +1,12 @@
-<h2>User Profile</h2>
-
-<p>Hi {{email}}!!!</p>
-<h3>Your position is {{userPosition}}</h3>
-<ul *ngIf="userReferrals.length > 0">
-    <h4>Your User Referrals are below:</h4>
-    <li *ngFor="let referral of userReferrals">{{referral}}</li>
-</ul>
+<div class="container mt-5 text-center">
+    <h2>User Profile</h2>
+    <h3 class="alert alert-success" *ngIf="userPosition===0">
+        Welcome to the premium membership group
+    </h3>
+    <p>Hi {{email}}!!!</p>
+    <h3>Your position is {{userPosition}}</h3>
+    <ul *ngIf="userReferrals.length > 0">
+        <h4>Your User Referrals are below:</h4>
+        <li *ngFor="let referral of userReferrals">{{referral}}</li>
+    </ul>
+</div>
